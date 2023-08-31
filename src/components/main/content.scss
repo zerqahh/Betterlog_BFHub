@@ -1,6 +1,80 @@
 .content {
-    width: 100vw;
-    height: 90vh;
-    background-color: rgb(7, 7, 7);
+  width: 100vw;
+  height: 90vh;
+  background-image: url(./bg-bf3.jpg);
+  background-position: center center;
+  background-size: cover;
+  display: flex;
 
+  .content-container {
+    width: 85vw;
+    height: 100%;
+    .menu {
+      width: 15vw;
+      height: 100%;
+      display: flex;
+      background-color: rgba(0, 0, 0, 0.904);
+
+      .irregular-button-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .irregular-button {
+          background-color: rgba(0, 0, 0, 0.55);
+          color: rgba(255, 255, 255, 0.75);
+          border: none;
+          font-size: 1.75vmin;
+          cursor: pointer;
+          font-family: "Arimo", sans-serif;
+          padding-top: 1.75vmin;
+          padding-bottom: 1.75vmin;
+          text-align: left;
+          font-weight: 600;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          &:hover {
+            background-color: rgb(12, 12, 12);
+            color: white;
+            // padding-top: 2vmin;
+            // padding-bottom: 2vmin;
+            transition: 0.2s;
+          }
+          &:active {
+            background-color: #b30564;
+          }
+
+          .menu-icon {
+            width: 25%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          img.vu-icon {
+            /* Styl dla ikony VU */
+            width: 2.5vmin;
+            height: auto;
+         
+            /* Dodaj inne style specyficzne dla ikony VU */
+          }
+
+          img {
+            width: 2.5vmin;
+            height: 2.5vmin;
+            scale: 1;
+          }
+
+     
+        }
+      }
+    }
+  }
+}
+
+.sidebar {
+  width: 15vw;
+  height: 100%;
+  background-color: rgb(3, 3, 3);
+  opacity: 0.97;
 }

@@ -1,70 +1,73 @@
 .landingpage {
-    width: 100vw;
-    height: 100vh;
-    background-image: url("./1.jpg");
-    background-size: cover;
-    background-position: center center; 
-    filter: grayscale(30%);
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./1.jpg");
+  background-size: cover;
+  background-position: center center;
+  filter: grayscale(30%);
 
-    .landingpage-container {
-        width: 100%;
-        height: 100%;
-       display: flex;
+  .landingpage-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
 
-       .landingpage-auth {
-        width: 40%;
-        height: 100%;
-        background-color: black;
-        opacity: 0.92;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-       }
+    .landingpage-auth {
+      width: 35%;
+      height: 100%;
+      background-color: black;
+      opacity: 0.95;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: 5%;
     }
+  }
 }
 
 button.supabase-auth-ui_ui-button:nth-child(1) {
-    background-color: #0e0d0d; /* Kolor tła przycisku */
-    color: #fff; /* Kolor tekstu przycisku */
-    padding: 12px 24px; /* Wielkość wewnętrznego odstępu przycisku */
-    border: none; /* Brak obramowania */
-    border-radius: 8px; /* Zaokrąglenie rogów */
-    font-size: 1.75vmin; /* Rozmiar czcionki */
-   /* Pogrubiona czcionka */
-    text-transform: uppercase; /* Tekst w wielkich literach */
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s; /* Efekt przejścia */
-    
-    font-family: 'Arimo', sans-serif;
-    display: flex;
-    flex-direction: column;
+  background-color: #0f0f0f; /* Kolor tła przycisku */
+  color: rgba(255, 255, 255, 0.5); /* Kolor tekstu przycisku */
+  border: none; /* Brak obramowania */
+  font-size: 1em; /* Rozmiar czcionki */
+  /* Pogrubiona czcionka */
+  text-transform: uppercase; /* Tekst w wielkich literach */
+  cursor: pointer;
+  transition: background-color 0.5s, color 0.5s; /* Efekt przejścia */
+  font-family: "Arimo", sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  width: 25vmin;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  
+  &:hover {
+    color: white;
   }
+}
 
-  button.supabase-auth-ui_ui-button:nth-child(2)  {
-    /* Twój styl dla ikony */
- /* Przykład: zmiana rozmiaru ikony */
-    margin-right: 82px; /* Przykład: odstęp między ikoną a tekstem */
-    /* ... inne style dla ikony */
-  }
-  
-  /* Stan hover - zmiana koloru tła i tekstu na hover */
-  button.supabase-auth-ui_ui-button:nth-child(1):hover {
-    background-color: #b30564;
-  }
-  
-  /* Stan aktywny - zmiana koloru tła i tekstu na kliknięcie */
-  button.supabase-auth-ui_ui-button:nth-child(1):active {
-    background-color: #7d060f;
-  }
-  
-  /* Stan nieaktywny - wygaszony kolor dla przycisku */
-  button.supabase-auth-ui_ui-button:nth-child(1):disabled {
-    background-color: #888;
-    color: #ccc;
-  }
 
-form, .supabase-auth-ui_ui-divider{
-    display: none;
-    visibility: hidden;
+
+/* Stan hover - zmiana koloru tła i tekstu na hover */
+button.supabase-auth-ui_ui-button:nth-child(1):hover {
+  background-color: #b30564;
+}
+
+/* Stan aktywny - zmiana koloru tła i tekstu na kliknięcie */
+button.supabase-auth-ui_ui-button:nth-child(1):active {
+  background-color: #7d060f;
+}
+
+/* Stan nieaktywny - wygaszony kolor dla przycisku */
+button.supabase-auth-ui_ui-button:nth-child(1):disabled {
+  background-color: #888;
+  color: #ccc;
+}
+
+form,
+.supabase-auth-ui_ui-divider {
+  display: none;
+  visibility: hidden;
 }
