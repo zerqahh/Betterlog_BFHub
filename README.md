@@ -1,1 +1,1 @@
-Our main goal is to replace Battlelog made by Electronic Arts with powerful tool called Betterlog -  social network website fully integrated with Battlefield 3 and Venice Unleashed providing external statistics and making competetive side of the game easier to reach.
+Our main goal is to replace BATTLELOG (Battlelog.com) made by Electronic Arts with powerful tool called BETTERLOG -  social network website fully integrated with Battlefield 3, Venice Unleashed and Discord. 
