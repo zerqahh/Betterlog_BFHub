@@ -9,27 +9,31 @@
   .content-container {
     width: 85vw;
     height: 100%;
+    display: flex;
+    justify-content: space-between;
     .menu {
       width: 15vw;
       height: 100%;
       display: flex;
-      background-color: rgba(0, 0, 0, 0.904);
+        background-color: rgba(0, 0, 0, 0.904);
 
       .irregular-button-container {
         display: flex;
         flex-direction: column;
         width: 100%;
+
         .irregular-button {
           background-color: rgba(0, 0, 0, 0.55);
           color: rgba(255, 255, 255, 0.75);
           border: none;
           font-size: 1.75vmin;
+
           cursor: pointer;
           font-family: "Arimo", sans-serif;
           padding-top: 1.75vmin;
           padding-bottom: 1.75vmin;
           text-align: left;
-          font-weight: 600;
+          font-weight: 300;
           text-transform: uppercase;
           display: flex;
           align-items: center;
@@ -38,7 +42,9 @@
             color: white;
             // padding-top: 2vmin;
             // padding-bottom: 2vmin;
-            transition: 0.2s;
+            transition: background-color 0.2s, color 0.2s, font-weight 0.2s;
+            font-weight: 600;
+            will-change: font-weight;
           }
           &:active {
             background-color: #b30564;
@@ -50,25 +56,32 @@
             display: flex;
             justify-content: center;
             align-items: center;
-          }
-          img.vu-icon {
-            /* Styl dla ikony VU */
-            width: 2.5vmin;
-            height: auto;
-         
-            /* Dodaj inne style specyficzne dla ikony VU */
-          }
 
-          img {
-            width: 2.5vmin;
-            height: 2.5vmin;
-            scale: 1;
-          }
+            img.vu-icon {
+              /* Styl dla ikony VU */
+              width: 2.5vmin;
+              height: auto;
 
-     
+              /* Dodaj inne style specyficzne dla ikony VU */
+            }
+
+            img {
+              width: 2.5vmin;
+              height: 2.5vmin;
+              scale: 1;
+            }
+          }
+          .menu-text {
+          }
         }
       }
     }
+  }
+
+  .content-screen {
+    width: 73.8vw;
+    height: 100%;
+    background-color: red;
   }
 }
 
@@ -78,3 +91,110 @@
   background-color: rgb(3, 3, 3);
   opacity: 0.97;
 }
+
+@media screen and (max-width: 4060px) {
+  .content {
+    .content-container {
+      .menu {
+        width: auto;
+
+        .irregular-button-container {
+          .irregular-button {
+            justify-content: center;
+            padding-right: 1vmin;
+            padding-left: 1vmin;
+            height: 6vmin;
+
+            .menu-img {
+              justify-content: center;
+            }
+
+            .menu-text {
+              display: flex;
+              align-items: center;
+              width: 0;
+              overflow: hidden;
+              opacity: 0;
+
+              transition: width 0.4s ease, transform 0.1s ease; /* Dodaj transform do animacji */
+              transform: translateX(-100%); /* Ukryj początkowo poza ekranem */
+            }
+            &:nth-child(2),
+            &:nth-child(4) {
+              white-space: nowrap; /* Dodaj white-space tylko dla drugiego i czwartego dziecka */
+            }
+          }
+
+          &:hover {
+            .menu-text {
+              width: 17vmin;
+              opacity: 1;
+              transform: translateX(
+                0
+              ); /* Przesuń w kierunku widocznego obszaru */
+              margin-left: 1vmin;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .menu-text {
+    font-size: 1.5vmin;
+    /* Inne style dla tekstu w menu */
+  }
+}
+
+@media screen and (max-width: 1400px) {
+    .content {
+      .content-container {
+        .menu {
+      
+  
+          .irregular-button-container {
+            .irregular-button {
+           
+  
+              .menu-img {
+      
+              }
+  
+              .menu-text {
+    
+              }
+              &:nth-child(2),
+              &:nth-child(4) {
+  
+              }
+            }
+  
+            &:hover {
+              .menu-text {
+                width: 15vmin;
+                opacity: 1;
+                transform: translateX(
+                  0
+                ); /* Przesuń w kierunku widocznego obszaru */
+                margin-left: 1vmin;
+              }
+            }
+          }
+        }
+
+        .content-screen {
+            
+            height: 100%;
+            background-color: red;
+          
+        }
+      }
+    }
+  
+    .menu-text {
+      font-size: 1.5vmin;
+      /* Inne style dla tekstu w menu */
+    }
+  }
+  
+  

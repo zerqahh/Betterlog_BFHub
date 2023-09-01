@@ -5,7 +5,11 @@ import { supabase } from "../supabase";
 import bell from "./bell-white.png";
 import mag from "./magwhite.png";
 import ammo from "./ammowhite.png";
-import versus from "./versuswhite.png"
+import versus from "./versuswhite.png";
+import setting from "./setting.png";
+import user from "./user.png";
+import exit from "./exit.png";
+import chat from "./chat.png";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,13 +31,16 @@ function Header() {
   return (
     <div className="Header">
       <div className="logo">
-        <span>BETTERL</span><img src={mag} alt="Icon" /><span>G</span>
+        <span>BETTERL</span>
+        <img src={mag} alt="Icon" />
+        <span>G</span>
       </div>
       <div className="header-mid">
         {" "}
         <img src={ammo} alt="Icon" />
         <img src={versus} alt="Icon" />
         <img src={mag} alt="Icon" />
+        <img src={chat} alt="Icon" />
         <img src={bell} alt="Icon" />
       </div>
       <div className="user-panel">
@@ -51,10 +58,27 @@ function Header() {
           {isMenuOpen && (
             <div className="hamburger-menu">
               <ul>
-                <li>Profile</li>
-                <li>Setting</li>
-                <li onClick={handleLogout}>Logout</li>
-                {/* ... dodaj więcej opcji menu ... */}
+                <li>
+                  <div className="li-img">
+                    {" "}
+                    <img src={user} alt="Icon" />{" "}
+                  </div>
+                  <div className="li-text">Profile</div>
+                </li>
+                <li>
+                  <div className="li-img">
+                    {" "}
+                    <img src={setting} alt="Icon" />
+                  </div>
+                  <div className="li-text">Setting</div>
+                </li>
+
+                <li onClick={handleLogout}>
+                  <div className="li-img">
+                    <img src={exit} alt="Icon" />{" "}
+                  </div>
+                  <div className="li-text">Logout </div>
+                </li>
               </ul>
             </div>
           )}

@@ -16,7 +16,7 @@
     letter-spacing: 0.2vmin;
     font-weight: 600;
     cursor: pointer;
-
+    
     span:hover {
       background-color: rgb(10, 10, 10);
     }
@@ -45,6 +45,8 @@
         transition: 0.3s;
         cursor: pointer;
       }
+    
+
     }
   }
   .user-panel {
@@ -98,17 +100,39 @@
           margin: 0;
 
           li {
-            padding: 10px;
+            padding: 1vmin;
             color: white;
             font-size: 1.75vmin;
-            transition: 0.3s;
+            transition: 0.1s;
             height: 2vmin;
+            display: flex;
+            align-items: center;
+      
+ 
             &:hover {
               background-color: rgb(10, 10, 10);
+          
             }
 
             &:active {
               background-color: #b30564;
+            }
+
+
+            .li-img {
+                width: 15%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                img {
+                    width: 2vmin;
+                  
+
+                }
+            }
+            .li-text {
+                width: 80%;
+                height: 100%;
             }
           }
         }
@@ -117,7 +141,7 @@
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1400px) {
     .Header {
       .user-panel {
         .panel-container {
