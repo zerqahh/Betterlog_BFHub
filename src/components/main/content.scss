@@ -15,7 +15,7 @@
       width: 15vw;
       height: 100%;
       display: flex;
-        background-color: rgba(0, 0, 0, 0.904);
+      background-color: rgba(0, 0, 0, 0.904);
 
       .irregular-button-container {
         display: flex;
@@ -79,9 +79,9 @@
   }
 
   .content-screen {
-    width: 73.8vw;
+    width: 69.9vw;
     height: 100%;
-    background-color: red;
+   
   }
 }
 
@@ -116,10 +116,11 @@
               overflow: hidden;
               opacity: 0;
 
-              transition: width 0.4s ease, transform 0.1s ease; /* Dodaj transform do animacji */
+              transition: width 0.3s ease, transform 0.1s ease; /* Dodaj transform do animacji */
               transform: translateX(-100%); /* Ukryj początkowo poza ekranem */
             }
             &:nth-child(2),
+            &:nth-child(3),
             &:nth-child(4) {
               white-space: nowrap; /* Dodaj white-space tylko dla drugiego i czwartego dziecka */
             }
@@ -127,7 +128,7 @@
 
           &:hover {
             .menu-text {
-              width: 17vmin;
+              width: 25vmin;
               opacity: 1;
               transform: translateX(
                 0
@@ -147,54 +148,34 @@
 }
 
 @media screen and (max-width: 1400px) {
-    .content {
-      .content-container {
-        .menu {
-      
-  
-          .irregular-button-container {
-            .irregular-button {
-           
-  
-              .menu-img {
-      
-              }
-  
-              .menu-text {
+  .content {
+    .content-container {
+      .menu {
+        .irregular-button-container {
     
-              }
-              &:nth-child(2),
-              &:nth-child(4) {
-  
-              }
-            }
-  
-            &:hover {
-              .menu-text {
-                width: 15vmin;
-                opacity: 1;
-                transform: translateX(
-                  0
-                ); /* Przesuń w kierunku widocznego obszaru */
-                margin-left: 1vmin;
-              }
+
+          &:hover {
+            .menu-text {
+              width: 24vmin;
+              opacity: 1;
+              transform: translateX(
+                0
+              ); /* Przesuń w kierunku widocznego obszaru */
+              margin-left: 1vmin;
             }
           }
         }
+      }
 
-        .content-screen {
-            
-            height: 100%;
-            background-color: red;
-          
-        }
+      .content-screen {
+        height: 100%;
+     
       }
     }
-  
-    .menu-text {
-      font-size: 1.5vmin;
-      /* Inne style dla tekstu w menu */
-    }
   }
-  
-  
+
+  .menu-text {
+    font-size: 1.5vmin;
+    /* Inne style dla tekstu w menu */
+  }
+}

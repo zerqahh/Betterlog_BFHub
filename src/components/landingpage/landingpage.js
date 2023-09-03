@@ -6,32 +6,49 @@ import { useNavigate } from "react-router-dom";
 import { supabase } from "../supabase";
 import { Auth } from "@supabase/auth-ui-react";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
-
+import store from "../data/store";
+import { useStoreState } from "easy-peasy";
 function LandingPage() {
   const navigate = useNavigate();
   const [recordCreated, setRecordCreated] = useState(false);
+  const localUser = useStoreState((state) => state.user.user);
 
   async function handleUserAuthChange(event, session) {
     if (event === "SIGNED_IN" && session?.user) {
       const discordUserId = session.user.id;
-
       const username = session.user.user_metadata.full_name;
       const avatar = session.user.user_metadata.avatar_url;
-      console.log("Dane użytkownika z Discorda:", {
+      console.log("Dane localUser z Discorda:", {
         discordUserId,
         username,
         avatar,
       });
-   
+
       try {
         const userExists = await checkUserExists(discordUserId);
 
         if (!userExists) {
           await createUserRecord(discordUserId, username, avatar);
           setRecordCreated(true);
+
+          // Użyj akcji setUser, aby zapisać dane użytkownika w stanie
+          store.getActions().user.setUser({
+            discordUserId,
+            username,
+            avatar,
+          });
+
           navigate("/bf3"); // Przenieś użytkownika na /bf3 po stworzeniu rekordu
         } else {
           setRecordCreated(true); // Ustaw stan na true, jeśli użytkownik już istnieje
+
+          // Użyj akcji setUser, aby zapisać dane użytkownika w stanie
+          store.getActions().user.setUser({
+            discordUserId,
+            username,
+            avatar,
+          });
+
           navigate("/bf3"); // Przenieś użytkownika na /bf3 jeśli już istnieje
         }
       } catch (error) {
@@ -78,6 +95,7 @@ function LandingPage() {
 
     return data.length > 0;
   }
+  console.log("Dane użytkownika w LandingPage:", localUser); // Dodaj ten console.log
 
   return (
     <div className="landingpage">
