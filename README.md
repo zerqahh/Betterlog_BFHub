@@ -17,6 +17,6 @@ What You Can Expect from BETTERLOG:
     Community Forums: Engage in discussions, share experiences, and connect with other gamers.
     Event Calendar: Stay updated on upcoming tournaments, leagues, and other events.
     Chat: Chat with friends and challenge them for a fight!
-    Ranked System: Will you gain rating around 90 or more likely 60? We will see ;)
+    Ranked System: Will you gain rating around 90? We will see ;) 
 
 We aim to create a central meeting place for all those who love Battlefield 3.
