@@ -20,7 +20,7 @@ What you can expect from BETTERLOG:
     Ranked System: Will you gain rating around 90? We will see ;) 
 
 We aim to create a central meeting place for all those who love Battlefield 3.
-
+```
   "dependencies": {
     "@supabase/auth-ui-react": "^0.4.2",
     "@supabase/supabase-js": "^2.33.1",
@@ -37,4 +37,4 @@ We aim to create a central meeting place for all those who love Battlefield 3.
     "react-scripts": "5.0.1",
     "react-tooltip": "^5.21.1",
     "sass": "^1.66.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4"```
