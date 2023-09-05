@@ -11,7 +11,7 @@ Login will be possible only through Discord. We want to avoid gathering private 
 
 Full integration with Battlefield 3 and VU is planned, however it may pose significant challenges during implementation.
 
-What You Can Expect from BETTERLOG:
+What you can expect from BETTERLOG:
 
     Player Profiles: Create personalized profiles where you can share your achievements and statistics.
     Community Forums: Engage in discussions, share experiences, and connect with other gamers.
