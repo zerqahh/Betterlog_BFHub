@@ -7,7 +7,7 @@ BETTERLOG aims to create a central community hub for Battlefield enthusiasts, wh
 Our platform will be designed to facilitate easy event organization and participation, allowing users to share their experiences and compare their statistics with others.
 
 Discord Authentication:
-We provide secure and convenient authentication, granting access to our platform exclusively through Discord accounts. This not only enhances convenience but also enhances user security.
+Login will be possible only through Discord. We want to avoid gathering private data as much as possible.
 
 Full integration with Battlefield 3 and VU is planned, however it may pose significant challenges during implementation.
 
