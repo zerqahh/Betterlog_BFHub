@@ -1,3 +1,5 @@
+=== WORK IN PROGRESS ===
+
 Project Description:
 
 BETTERLOG is a social networking platform designed for Battlefield enthusiasts seeking an alternative to Electronic Arts' Battlelog. The project is currently in development, but we can already present its core principles.
